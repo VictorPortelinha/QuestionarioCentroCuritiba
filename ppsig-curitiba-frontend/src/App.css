@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --c-bg:         #0f1117;
+  --c-surface:    #181b24;
+  --c-surface2:   #1e222e;
+  --c-border:     #2a2f3d;
+  --c-accent:     #4f9e6f;      /* Curitiba green */
+  --c-accent2:    #e8a83e;      /* warm amber */
+  --c-text:       #e8eaf0;
+  --c-muted:      #8892a4;
+  --c-danger:     #e05252;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --radius-sm:    6px;
+  --radius-md:    12px;
+  --radius-lg:    20px;
+
+  --shadow-card:  0 4px 24px rgba(0,0,0,.45);
+  --shadow-map:   0 2px 16px rgba(0,0,0,.6);
+
+  --transition:   .18s ease;
+
+  /* Category colors */
+  --cat-patrimonio: #7b68ee;
+  --cat-mobilidade: #4f9e6f;
+  --cat-moradia:    #e8a83e;
+  --cat-seguranca:  #e05252;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ─── App shell ──────────────────────────────────────────────────── */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Loading ────────────────────────────────────────────────────── */
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--c-muted);
+  font-size: .9rem;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--c-border);
+  border-top-color: var(--c-accent);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── Buttons ────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  transition: all var(--transition);
+}
+
+.btn-primary {
+  background: var(--c-accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #3d8a5c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79,158,111,.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--c-text);
+  border: 1.5px solid var(--c-border);
+}
+.btn-outline:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--c-muted);
+  padding: .5rem .75rem;
+}
+.btn-ghost:hover { color: var(--c-text); }
+
+.btn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ─── Tags ───────────────────────────────────────────────────────── */
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.cat-patrimonio { background: rgba(123,104,238,.15); color: var(--cat-patrimonio); }
+.cat-mobilidade { background: rgba(79,158,111,.15);  color: var(--cat-mobilidade); }
+.cat-moradia    { background: rgba(232,168,62,.15);  color: var(--cat-moradia); }
+.cat-seguranca  { background: rgba(224,82,82,.15);   color: var(--cat-seguranca); }
+
+/* ─── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--c-bg); }
+::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--c-muted); }
+
+/* ─── Responsive helpers ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  html { font-size: 15px; }
+}

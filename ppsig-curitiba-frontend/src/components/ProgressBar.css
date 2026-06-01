@@ -1,0 +1,29 @@
+.progress-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.progress-track {
+  height: 4px;
+  background: var(--c-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-accent), var(--c-accent2));
+  border-radius: 2px;
+  transition: width .4s ease;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: .75rem;
+  color: var(--c-muted);
+}
+
+.progress-step strong { color: var(--c-text); }
+.progress-pct { color: var(--c-accent); font-weight: 600; }
