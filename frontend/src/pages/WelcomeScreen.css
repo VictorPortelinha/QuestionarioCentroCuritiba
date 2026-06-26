@@ -201,3 +201,37 @@
   .welcome-content { gap: 1.25rem; }
   .welcome-cta { align-self: stretch; justify-content: center; }
 }
+
+/* ── User bar ── */
+.welcome-userbar {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.welcome-user {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .82rem;
+  color: var(--c-text);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  padding: .4rem .8rem;
+  border-radius: 999px;
+}
+
+.welcome-user-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--c-accent);
+}
+
+.welcome-logout { font-size: .82rem; }
+
+@media (max-width: 640px) {
+  .welcome-userbar { top: .75rem; right: 1rem; }
+}

@@ -8,9 +8,20 @@ const CATEGORIES = [
   { icon: '🛡️', label: 'Segurança Urbana', cls: 'cat-seguranca' },
 ];
 
-export default function WelcomeScreen({ onStart }) {
+export default function WelcomeScreen({ onStart, user, onLogout }) {
   return (
     <div className="welcome">
+      {user && (
+        <div className="welcome-userbar">
+          <span className="welcome-user">
+            <span className="welcome-user-dot" />
+            {user.name?.split(' ')[0]}
+          </span>
+          <button className="btn btn-ghost welcome-logout" onClick={onLogout}>
+            Sair
+          </button>
+        </div>
+      )}
       {/* Background texture */}
       <div className="welcome-bg" aria-hidden="true">
         <div className="bg-grid" />
