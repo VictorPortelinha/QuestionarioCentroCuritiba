@@ -44,13 +44,6 @@ export default function AlreadyResponded({ user, responseId, onLogout }) {
               <p>O sistema bloqueia múltiplos envios do mesmo usuário e dispositivo.</p>
             </div>
           </div>
-          <div className="info-item">
-            <span className="info-icon">📊</span>
-            <div>
-              <strong>Em análise</strong>
-              <p>Os dados serão processados pela equipe de planejamento urbano.</p>
-            </div>
-          </div>
         </div>
 
         <button className="btn btn-outline success-restart" onClick={onLogout}>

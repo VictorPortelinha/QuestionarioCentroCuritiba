@@ -24,9 +24,8 @@ export default function SuccessScreen({ responseId, onRestart }) {
         </h1>
 
         <p className="success-text">
-          Obrigado por participar do Programa Curitiba de Volta ao Centro.
-          Sua contribuição é fundamental para subsidiar as políticas públicas
-          de requalificação urbana da Região Central.
+          Obrigado por participar do projeto PILOTO Programa Curitiba de Volta ao Centro.
+        
         </p>
 
         {responseId && (
@@ -38,24 +37,17 @@ export default function SuccessScreen({ responseId, onRestart }) {
 
         <div className="success-info">
           <div className="info-item">
-            <span className="info-icon">🗺️</span>
+            <span className="info-icon"></span>
             <div>
               <strong>Dados georreferenciados</strong>
               <p>Seus marcadores foram armazenados como pontos no mapa da cidade.</p>
             </div>
           </div>
           <div className="info-item">
-            <span className="info-icon">📊</span>
-            <div>
-              <strong>Análise participativa</strong>
-              <p>As respostas serão analisadas pela equipe de planejamento urbano da Prefeitura.</p>
-            </div>
-          </div>
-          <div className="info-item">
-            <span className="info-icon">🏙️</span>
+            <span className="info-icon"></span>
             <div>
               <strong>Impacto real</strong>
-              <p>Os resultados servirão de base para as ações do programa de revitalização do Centro.</p>
+              <p>Os resultados servirão de base para melhoramento do PILOTO</p>
             </div>
           </div>
         </div>

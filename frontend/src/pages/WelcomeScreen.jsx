@@ -2,10 +2,10 @@ import React from 'react';
 import './WelcomeScreen.css';
 
 const CATEGORIES = [
-  { icon: '🏛️', label: 'Patrimônio e Cultura', cls: 'cat-patrimonio' },
-  { icon: '🚲', label: 'Mobilidade e Infraestrutura', cls: 'cat-mobilidade' },
-  { icon: '🏠', label: 'Moradia e Inclusão', cls: 'cat-moradia' },
-  { icon: '🛡️', label: 'Segurança Urbana', cls: 'cat-seguranca' },
+  { icon: '', label: 'Patrimônio e Cultura', cls: 'cat-patrimonio' },
+  { icon: '', label: 'Mobilidade e Infraestrutura', cls: 'cat-mobilidade' },
+  { icon: '', label: 'Moradia e Inclusão', cls: 'cat-moradia' },
+  { icon: '', label: 'Segurança Urbana', cls: 'cat-seguranca' },
 ];
 
 export default function WelcomeScreen({ onStart, user, onLogout }) {
@@ -32,7 +32,7 @@ export default function WelcomeScreen({ onStart, user, onLogout }) {
         {/* Header badge */}
         <div className="badge">
           <span className="badge-dot" />
-          Programa Curitiba de Volta ao Centro — 2026
+          Programa Curitiba de Volta ao Centro  2026
         </div>
 
         {/* Title */}
@@ -92,8 +92,7 @@ export default function WelcomeScreen({ onStart, user, onLogout }) {
         </button>
 
         <p className="welcome-footer">
-          Suas respostas são anônimas e serão utilizadas para subsidiar
-          políticas públicas de requalificação urbana.
+          Suas respostas são anônimas e serão utilizadas para testar um PILOTO de opiniões publicas em urbanismo.
         </p>
       </div>
     </div>
